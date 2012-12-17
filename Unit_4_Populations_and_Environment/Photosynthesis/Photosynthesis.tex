@@ -4,6 +4,7 @@
 \usepackage{fancyhdr}
 \usepackage[parfill]{parskip}
 \usepackage{tikz}
+\usepackage{multicol}
 \pagestyle{fancyplain}
 
 \title{Photosynthesis}
@@ -88,8 +89,51 @@ Here is a diagram of the interconnection between the reactions:
 \subsection*{The light dependent reaction}
 In this reaction, energy is captured from light by pigments such as chlorophyll and used to split water and create both ATP and NADP.
 
-The light dependent reaction takes place in the \textbf{thylakoids}.
+The light dependent reaction takes place in the \textbf{thylakoids}. The thylakoids contain pigments such as chlorophyll and other carotenoids. These molecules are able to absorb light and use it to boost an electron to higher energy levels. The energy from this electron is then used to power three different reactions:
+\begin {itemize}
+ \item Photolysis
+ \item Photophosphorylation
+ \item Production of reduced NADP
+\end{itemize}
 
+\newpage
+
+\subsubsection*{Photolysis}
+Here, the excited electrons from the chlorophyll are used to split water into three different parts:
+\begin{itemize}
+	\item Protons ($H^{+}$)
+	\item Electrons ($e^{-}$)
+	\item Oxygen
+\end{itemize}
+This is the reaction that produces the oxygen that is released into the environment. The equation for the reaction is as follows:
+\[
+	2H_2O \rightarrow 4H^+ + 4e^- + O_2
+\]
+
+\subsubsection*{Photophosphorylation}
+The excited electrons are also used to produce ATP. The reaction is as follows:
+\[
+	ADP + Pi + \textrm{\textit{energy from excited electrons}} \rightarrow ATP
+\]
+This process is facilitated by many different electron carriers in the \textbf{electron transport chain}. The electron transport chain pumps hydrogen ions against their concentration gradient into spaces in the thylakoid membranes. The membrane is not permeable to hydrogen ions and so in order to flow back to the other side they must pass through ATPases which add a phosphate group to ADP molecules to create ATP.
+
+\subsubsection*{Production of reduced NADP}
+Since electrons can't react with most molecules on their own, they require an electron carrier such as NADP to facilitate transport and reactions. In order to retain it's neutral charge, NADP molecules accept both a proton and an electron when they are reduced.
+\[
+	NADP + H^+ + e^- +\textrm{\textit{energy from excited electrons}}\rightarrow \textrm{\textit{reduced NADP}}
+\]
+
+\subsubsection*{Key points:}
+\begin{multicols}{2}
+\begin{itemize}
+    \item Takes place in thylakoids
+    \item Electrons in chlorophyll excited
+    \item Electrons in photolysis of water
+    \item NADP is then reduced
+    \item ATP generated from photophosphorylation
+		\item ATPase acts as $H^+$ carrier
+\end{itemize}
+\end{multicols}
 
 \subsection*{The light independent reaction}
 The light dependent reaction takes place in the \textbf{stroma}.

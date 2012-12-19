@@ -6,6 +6,7 @@
 \usepackage{tikz}
 \usepackage{multicol}
 \pagestyle{fancyplain}
+\usetikzlibrary{shapes, patterns}
 
 \title{Photosynthesis}
 \author{Todd Davies}
@@ -27,10 +28,10 @@ Photosynthesis is a metabolic reaction that takes place in plants and in some mi
 The goal of photosynthesis is to use light energy (usually from the Sun) to turn carbon dioxide and water into sugars that the organism can use to respire. It is a reduction reaction since carbon dioxide and water are both reduced.
 
 Photosynthesis takes place in the \textit{chloroplasts}.
-\section*{ATP as an energy store}
+\section*{What is ATP?}
 Organisms use a molecule called ATP (adenosine triphosphate) to store small amounts of energy in usable, portable and accessible amounts. ATP is often referred to as the energy currency of cells. 
 
-As the name suggests, an ATP molecule has three phosphate groups. A phosphate (pi) molecule is added to ADP to make ATP:
+As the name suggests, an ATP molecule has three phosphate groups. A phosphate (pi) molecule is added to ADP (adenosine diphosphate) to make ATP:
 \[
 	ADP + pi + energy \rightarrow ATP
 \]
@@ -42,7 +43,7 @@ Reasons that the body uses ATP as it's energy currency include:
 \end{itemize}
 
 \section*{How does photosynthesis work?}
-There are two stages in photosynthesis, the \textbf{light dependent reaction} and the \textbf{light independent reaction}. They happen simultaneously and don't directly require each other in order to work.
+There are two stages in photosynthesis, the \textbf{light dependent reaction} and the \textbf{light independent reaction}. They happen simultaneously and are loosely coupled so that they are independent of each-other.
 
 However, the light independent reaction does need products from the light dependent reaction in order to have the energy it needs to work.
 
@@ -52,31 +53,31 @@ Here is a diagram of the interconnection between the reactions:
 	\begin{tikzpicture}
 	%Top line
 		%Water
-		\draw [fill=blue!60,ultra thick,blue!60] (1, 1) rectangle (3, 3);
+		\draw (1, 1) rectangle (3, 3);
 		\node at (2, 2) {Water};
 		%Arrow to Light dependent reaction
 		\draw [->] (3.1, 2) -- (3.9, 2);
 		%Light dependent reaction
-		\draw [fill=yellow,ultra thick,yellow] (4,  1) rectangle (8, 3);
+		\draw (4,  1) rectangle (8, 3);
 		\node at (6, 2) {Light dependant reaction};
 		%Arrow to Oxygen
 		\draw [->] (8.1, 2) -- (8.9, 2);
 		%Oxygen
-		\draw [fill=black!20,ultra thick,black!20] (9, 1) rectangle (11, 3);
+		\draw (9, 1) rectangle (11, 3);
 		\node at (10, 2) {Oxygen};
 	%Bottom line
 		%Carbon dioxide
-		\draw [fill=blue!60,ultra thick,blue!60] (0.8, -1) rectangle (3.2, -3);
+		\draw (0.8, -1) rectangle (3.2, -3);
 		\node at (2, -2) {Carbon dioxide};
 		%Arrow to Light dependent reaction
 		\draw [->] (3.3, -2) -- (3.7, -2);
 		%Light dependent reaction
-		\draw [fill=yellow,ultra thick,yellow] (3.8, -1) rectangle (8.2, -3);
+		\draw (3.8, -1) rectangle (8.2, -3);
 		\node at (6, -2) {Light independent reaction};
 		%Arrow to Oxygen
 		\draw [->] (8.3, -2) -- (8.8, -2);
 		%Oxygen
-		\draw [fill=black!20,ultra thick,black!20] (8.9, -1) rectangle (11.1, -3);
+		\draw (8.9, -1) rectangle (11.1, -3);
 		\node at (10, -2) {Carbohydrate};
 	%Middle arrow
 		\draw [->] (6, 0.8) -- (6, -0.8);
@@ -89,7 +90,7 @@ Here is a diagram of the interconnection between the reactions:
 \subsection*{The light dependent reaction}
 In this reaction, energy is captured from light by pigments such as chlorophyll and used to split water and create both ATP and NADP.
 
-The light dependent reaction takes place in the \textbf{thylakoids}. The thylakoids contain pigments such as chlorophyll and other carotenoids. These molecules are able to absorb light and use it to boost an electron to higher energy levels. The energy from this electron is then used to power three different reactions:
+The light dependent reaction takes place in the \textbf{thylakoids}. The thylakoids contain pigments such as chlorophyll and other carotenoids. Carotenoids are molecules which can absorb light and use it to boost an electron to higher energy levels. The energy from this electron is then used to power three different reactions:
 \begin {itemize}
  \item Photolysis
  \item Photophosphorylation
@@ -115,28 +116,55 @@ The excited electrons are also used to produce ATP. The reaction is as follows:
 \[
 	ADP + Pi + \textrm{\textit{energy from excited electrons}} \rightarrow ATP
 \]
-This process is facilitated by many different electron carriers in the \textbf{electron transport chain}. The electron transport chain pumps hydrogen ions against their concentration gradient into spaces in the thylakoid membranes. The membrane is not permeable to hydrogen ions and so in order to flow back to the other side they must pass through ATPases which add a phosphate group to ADP molecules to create ATP.
+This process is facilitated by many different electron carriers in the \textbf{electron transport chain}. The electron transport chain pumps hydrogen ions against their concentration gradient into spaces in the thylakoid membranes. The membrane is not permeable to hydrogen ions and so in order to flow back to the other side they must pass through ATPases, proteins that add a phosphate group to ADP molecules to create ATP.
 
+\begin{center}
+	\begin{tikzpicture}
+	%Thylakoid membrane
+		\draw [-] (0, 1) -- (8, 1);
+		\draw [-] (0, -1) -- (8, -1);
+		\draw [step=0.4,black!25,thin] (0,-1) grid (8,1);
+		\node at (4, 0) {Thylakoid membrane};
+	%Hydrogen pumped against concentration gradient
+		\draw [->] (2, 1.5) -- (2, -1.5);
+		\node at (2.1, 1.7) {$H^+$};
+	%Low H+ conc
+		\node at (0.6, 1.4) {Low $H^+$ conc};
+	%High H+ conc
+		\node at (0.6, -1.4) {High $H^+$ conc};
+	%ATPase
+		\draw (7,0) node[ellipse, minimum height=3cm,minimum width=2cm,draw, fill=white] {};
+		\node [rotate=90] at (6.7,0) {ATPase};
+	%Hydrogen pumped through ATPase
+		\draw [<-] (7, 2) -- (7, -2);
+		\node at (7.1, -2.2) {$H^+$};
+	\end{tikzpicture}
+\end{center}
+
+\newpage
 \subsubsection*{Production of reduced NADP}
 Since electrons can't react with most molecules on their own, they require an electron carrier such as NADP to facilitate transport and reactions. In order to retain it's neutral charge, NADP molecules accept both a proton and an electron when they are reduced.
 \[
 	NADP + H^+ + e^- +\textrm{\textit{energy from excited electrons}}\rightarrow \textrm{\textit{reduced NADP}}
 \]
 
+\textit{N.b. these electrons are from photolysis.}
+
 \subsubsection*{Key points:}
-\begin{multicols}{2}
+%\begin{multicols}{2}
 \begin{itemize}
     \item Takes place in thylakoids
-    \item Electrons in chlorophyll excited
-    \item Electrons in photolysis of water
-    \item NADP is then reduced
+    \item Electrons in chlorophyll become excited
+    \item Electrons are released in photolysis of water
+    \item NADP is then reduced forming NADPH
     \item ATP generated from photophosphorylation
-		\item ATPase acts as $H^+$ carrier
+		\item ATPase acts as $H^+$ carrier protein
 \end{itemize}
-\end{multicols}
+%\end{multicols}
 
+\newpage
 \subsection*{The light independent reaction}
-The light dependent reaction takes place in the \textbf{stroma}. As the name suggests, this reaction doesn't need light to take place, however in practice this reaction does stop after dark since it requires resources from the light dependent reaction to function. In this stage of photosynthesis, carbon dioxide is taken from the atmosphere and turned into carbohydrates.
+The light dependent reaction takes place in the \textbf{stroma}. As the name suggests, this reaction doesn't need light to take place, however in practice this reaction does stop after dark since it requires ATP and NADP from the light dependent reaction to function. In this stage of photosynthesis, carbon dioxide is taken from the atmosphere and turned into carbohydrates.
 
 The Calvin cycle describes what happens during the light independent reaction:\\
 \begin{center}
@@ -204,13 +232,13 @@ All these compounds are a lot to remember, here's a table illustrating them:
 \section*{Limiting factors}
 \subsection*{Light}
 \begin{itemize}
-	\item Light with unsuitable wavelengths may not be suitable for photosynthesis.
+	\item The light must be of specific wavelengths for photosynthesis.
 	\item If there is light for a short period of time, the plant won't photosynthesise very much.
 	\item Light of low intensity is a limiting factor (rate of photosynthesis usually increases proportionally to intensity if the limiting factor is intensity).
 \end{itemize}
 If the light intensity is the limiting factor, and the light intensity increases, then the rate of photosynthesis doesn't increase forever. There is a point where either the plant cannot physically photosynthesise any faster or another factor will become limiting (such as $CO_2$) concentration.
 
-Very high light intensities may damage the plant and reduce photosynthesis.
+Very high light intensities may damage the plant and reduce the rate of photosynthesis.
 
 \subsection*{Temperature}
 Temperature doesn't have an effect on the light dependent reaction, since this reaction is powered by light, not kinetic energy. However, the light independent reaction is reliant upon collisions between molecules and is therefore affected by temperature.
@@ -218,11 +246,11 @@ Temperature doesn't have an effect on the light dependent reaction, since this r
 Very high temperatures will denature enzymes and slow photosynthesis.
 
 \subsection*{Carbon dioxide concentration}
-In areas of high fauna density, carbon dioxide can be a precious resource and becomes a limiting factor. Since in normal air, $CO_2$ concentration is around 0.04\%, the limiting factor for most crops is the concentration of carbon dioxide.
+In areas of high fauna density, carbon dioxide can be a precious resource and becomes a limiting factor. Since in normal air, $CO_2$ concentration is around 0.04\% (i.e. not much), the limiting factor for most crops is the concentration of carbon dioxide.
 
 
 \section*{Managing greenhouses}
-Greenhouses are ideal environments for examiners to use in questions about photosynthesis. With proper management, they can produce higher yields, grow unusual crops and grow crops out of season. They can do this by controlling conditions that are the limiting factors of plants.
+Greenhouses are ideal environments for examiners to use in questions about photosynthesis. With proper management, they can produce higher yields, grow unusual crops and grow crops that are out of season. They can do this by controlling conditions that can act as the limiting factors of plants.
 
 Greenhouses can have automatic sprinkler systems and humidifiers to keep the water levels correct, paraffin heaters to supply $CO_2$ and keep the temperature just right and artificial lighting to keep photosynthesis going throughout the night. These systems can be controlled by computers that will constantly monitor the conditions and keep them optimum.
 
@@ -237,10 +265,11 @@ Where does the light independent and the light dependent reactions take place?
 The light independent reaction takes place in the stroma and the light dependent reaction takes place in the thylakoid membrane.
 
 \subsection*{Question 2}
-Give an example of oxidation in the Calvin cycle.
+Give an example of oxidation and an example of reduction in the Calvin cycle.
 
 \textbf{Answer}\\
-Reduced NADP is oxidised to NADP.
+Reduced NADP is oxidised to NADP.\\
+GP is reduced to TP.
 
 \subsection*{Question 3}
 How is the structure of the chloroplast adapted for it's function?

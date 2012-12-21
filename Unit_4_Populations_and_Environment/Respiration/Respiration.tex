@@ -6,6 +6,7 @@
 \usepackage{tikz}
 \usepackage{multicol}
 \usepackage{makecell}
+\usepackage{multirow}
 \pagestyle{fancyplain}
 \usetikzlibrary{shapes, patterns, arrows}
 
@@ -27,7 +28,7 @@ Respiration releases the energy stored in glucose by oxidising it and creates AT
 There are four stages of respiration, glycolysis, the link reaction, the Krebs cycle, and the electron transport chain.
 
 \subsection*{Glycolysis}
-Gylcolysis takes place in the cytoplasm of the cell. It is the only part of respiration that can function without oxygen.
+Gylcolysis takes place in the cytoplasm of the cell. It can function without oxygen.
 
 Since sugars are unreactive, two molecules of ATP are used to add two phosphate groups to the glucose molecule, which is then broken down into two molecules of TP (triose phospoate). The TP is then oxidised to pyruvate and reduced NAD. This releases enough energy to create four ATP molecules from four ATP + pi molecules.
 
@@ -163,5 +164,76 @@ Occurs in the matrix of the mitochondria. The aim of the Krebs cycle is to suppl
 	\path [line] (5-4) -- (ATP);
 	\path [line] (5-4) -- (electrons_to_NAD_FAD);
 \end{tikzpicture}
+
+\subsection*{Electron transport chain}
+It is here that most of the ATP is created for respiration.
+
+Here are the steps:
+\begin{enumerate}
+	\item The reduced FAD and NAD release their hydrogen atoms as they are oxidised to FAD and NAD. These hydrogen atoms split into protons and electrons.
+	\item The electrons move along the electron transport chain and lose energy as they do so. This energy is used to pump protons from the mitochondrial matrix into the intermembrane space (between the inner and outer mitochondrial membranes).
+	\item This creates a concentration gradient of protons (more in intermembrane space).
+	\item The protons move back into the matrix of the mitochondrion by passing through ATPase. This provides the energy to synthesise ATP from ADP + pi.
+	\item The protons, electrons and oxygen combine to form water.
+\end{enumerate}
+
+\textit{N.b. the movement of $H^+$ ions across a membrane is called chemiosmosis.}
+
+\section*{The amount of ATP produced}
+This table shows the amount of ATP produced for one glucose molecule respired:
+
+\begin{center}
+	\begin{tabular}{|l|l|r|}
+		\hline
+			Stage & Molecules made & \# ATP produced\\ \hline
+			Glycolysis & 2 ATP & 2\\ \hline
+			Glycolysis & 2 reduced NAD & $2 \times 2.5 = 5$\\ \hline
+			Link reaction ($\times 2$) & 2 reduced NAD & $2 \times 2.5 = 5$\\ \hline
+			Krebs cycle ($\times 2$) & 2 ATP & 2\\ \hline
+			Krebs cycle ($\times 2$) & 6 reduced NAD & $6 \times 2.5 = 15$\\ \hline
+			Krebs cycle ($\times 2$) & 2 reduced FAD & $2 \times 1.5 = 3$\\ \hline
+			\multicolumn{3}{|r|}{Total ATP = 32}\\ \hline
+	\end{tabular}
+\end{center}
+
+Research shows that one molecule of reduced FAD can produce 1.5 ATP molecules and one molecule of reduced NAD can produce 2.5 ATP molecules. We also must take into account that the link reaction and Krebs cycle both run twice per glucose molecule.
+
+\section*{Anaerobic respiration}
+When there isn't oxygen available for respiration, anaerobic respiration can be used to supply a little bit of ATP just to keep things ticking over. In anaerobic respiration, pyruvate from the link reaction is converted to ethanol (in plants/yeast) or lactate (in mammals/some bacteria). This produces NAD from reduced NAD which means glycolysis can continue to produce a little bit of ATP even though there's no oxygen available.
+
+\section*{Questions to practice}
+\textbf{Question 1}\\
+Where does the Krebs cycle occur?
+
+\textbf{Answer}\\
+The matrix of the mitochondria.
+
+\textbf{Question 2}\\
+Carbon monoxide inhibits the production of water in the electron transport chain. Why does this affect ATP production in the electron transport chain and Krebs cycle.
+
+\textbf{Answer}\\
+Stops the transfer of electrons through the electron transfer chain (no electrons are taken out) so $H^+$ ions aren't pumped across the membrane and ATPase stops producing ATP.
+
+No NAD and FAD are produced by the electron transfer chain and so the Krebs cycle cannot continue (since it has nowhere to offload extra electrons).
+
+\textbf{Question 3}\\
+Describe how glucose is converted to pyruvate.
+
+\textbf{Answer}\\
+In glycolysis, glucose first undergoes phosphorylation by adding two phosphate groups from two ATP molecules which produces two molecules of TP and two molecules of ADP. The TP is then oxidised using electrons from NAD to produce two pyruvate molecules. There is a net gain of 2ATP (2 used, 4 made).
+
+\textbf{Question 4}\\
+Write an equation to show how lactate is produced.
+
+\textbf{Answer}\\
+\[
+	Glucose + ATP \rightarrow 2(TP + ADP) \rightarrow 2 \times pyruvate + \textrm{\textit{reduced NAD}} \rightarrow lactate + NAD
+\]
+
+\textbf{Question 5}\\
+Why is lactate produced even though no ATP is produced from the reaction?
+
+\textbf{Answer}\\
+Reduced NAD is oxidised to NAD which allows glycolysis to continue under anaerobic conditions and produce some ATP.
 
 \end{document}

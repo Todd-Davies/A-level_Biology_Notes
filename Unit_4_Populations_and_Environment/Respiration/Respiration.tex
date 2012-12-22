@@ -123,47 +123,49 @@ Here is a diagram of the link reaction:
 \subsection*{Krebs cycle}
 Occurs in the matrix of the mitochondria. The aim of the Krebs cycle is to supply electrons to the electron transport chain, so it doesn't directly create very much ATP.
 
-\begin{tikzpicture}
+\begin{center}
+	\begin{tikzpicture}
 
-	% Define block styles
-	\tikzstyle{line} = [draw, -latex']
-	\tikzstyle{connector} = [fill,circle,inner sep=0pt,minimum size=6pt]
+		% Define block styles
+		\tikzstyle{line} = [draw, -latex']
+		\tikzstyle{connector} = [fill,circle,inner sep=0pt,minimum size=6pt]
 
 
-	\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (acetylcoenzymeA) at (0,0) {\makecell[c]{2 carbon\\acetlycoenzyme A}};
-	
-	\node[connector] (center) at (0, -2) {};
-	
-	\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (6C) at (4,-2) {\makecell[c]{6 carbon molecule}};
-	
-	\node[connector] (6-5) at (2, -3) {};
-	
-	\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (5C) at (0,-4) {\makecell[c]{5 carbon molecule}};
-	
-	\node[connector] (5-4) at (-2, -3) {};
-	
-	\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (4C) at (-4,-2) {\makecell[c]{4 carbon molecule}};
-	
-	\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (1_CO2) at (5.5,-4.5) {\makecell[c]{Carbon dioxide}};
-	
-	\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (electrons_to_NAD) at (4,-6) {\makecell[c]{Electrons \\transferred\\to NAD}};
-	
-	\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (2_CO2) at (-5,-3.4) {\makecell[c]{Carbon dioxide}};
-	
-	\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (ATP) at (-4,-4.6) {\makecell[c]{ATP}};
-	
-	\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (electrons_to_NAD_FAD) at (-2,-6.5) {\makecell[c]{Electrons \\transferred to\\NAD and FAD}};
+		\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (acetylcoenzymeA) at (0,0) {\makecell[c]{2 carbon\\acetlycoenzyme A}};
+		
+		\node[connector] (center) at (0, -2) {};
+		
+		\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (6C) at (4,-2) {\makecell[c]{6 carbon molecule}};
+		
+		\node[connector] (6-5) at (2, -3) {};
+		
+		\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (5C) at (0,-4) {\makecell[c]{5 carbon molecule}};
+		
+		\node[connector] (5-4) at (-2, -3) {};
+		
+		\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (4C) at (-4,-2) {\makecell[c]{4 carbon molecule}};
+		
+		\node[thick,draw,minimum height=0.5cm,minimum width=2cm] (1_CO2) at (4.5,-3.5) {\makecell[c]{Carbon dioxide}};
+		
+		\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (electrons_to_NAD) at (4,-6) {\makecell[c]{Electrons \\transferred\\to NAD}};
+		
+		\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (2_CO2) at (-5,-3.4) {\makecell[c]{Carbon dioxide}};
+		
+		\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (ATP) at (-4,-4.6) {\makecell[c]{ATP}};
+		
+		\node[thick,draw,minimum height=0.5cm,minimum width=3.2cm] (electrons_to_NAD_FAD) at (-2,-6.5) {\makecell[c]{Electrons \\transferred to\\NAD and FAD}};
 
-	\path [line] (acetylcoenzymeA) -- (center);
-	\path [line] (4C) -- (6C);
-	\path [line] (6C) -- (5C);
-	\path [line] (5C) -- (4C);
-	\path [line] (6-5) -- (1_CO2);
-	\path [line] (6-5) -- (electrons_to_NAD);
-	\path [line] (5-4) -- (2_CO2);
-	\path [line] (5-4) -- (ATP);
-	\path [line] (5-4) -- (electrons_to_NAD_FAD);
-\end{tikzpicture}
+		\path [line] (acetylcoenzymeA) -- (center);
+		\path [line] (4C) -- (6C);
+		\path [line] (6C) -- (5C);
+		\path [line] (5C) -- (4C);
+		\path [line] (6-5) -- (1_CO2);
+		\path [line] (6-5) -- (electrons_to_NAD);
+		\path [line] (5-4) -- (2_CO2);
+		\path [line] (5-4) -- (ATP);
+		\path [line] (5-4) -- (electrons_to_NAD_FAD);
+	\end{tikzpicture}
+\end{center}
 
 \subsection*{Electron transport chain}
 It is here that most of the ATP is created for respiration.

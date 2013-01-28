@@ -1,0 +1,256 @@
+\documentclass{article}
+
+\usepackage[normalem]{ulem}
+\usepackage{fancyhdr}
+\usepackage[parfill]{parskip}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{calc}
+\pagestyle{fancyplain}
+
+\title{3.5.8 - Gene cloning \& transfer}
+\author{Todd Davies}
+\date{\today}
+
+\begin{document}
+
+\rhead{3.5.8 - Gene cloning \& transfer}
+\lhead{\today}
+
+\maketitle
+
+\section*{What is gene cloning \& transfer?}
+\thispagestyle{empty}
+
+Gene cloning refers to a method of isolating a gene in the DNA of an organism
+and cloning it. Gene transfer is how scientists then insert it into the DNA of
+another organism so that the genotype of that organism is altered to include
+this gene.
+
+{\bf Recombinant DNA} (rDNA) is the general name for taking a piece of one DNA,
+and combining it with another strand of DNA. This new strand of DNA (now
+called rDNA) can be introduced into a cell to alter the cell's genotype.
+
+\section*{How it works}
+
+The process of making a protein using rDNA technology involves five stages:
+
+\begin{enumerate}
+
+	\item {\bf Isolation} of the DNA fragments that have the gene for the
+	desired protein (assuming you know where to find these fragments on the
+	chromosome).
+
+	\item {\bf Insertion} of the DNA fragments into a {\it vector}.
+
+	\item {\bf Transformation} which is the transfer of the isolated DNA into a
+	suitable host cell.
+
+	\item {\bf Identification} of the host cells that have succesfully taken up
+	the gene (by use of {\it gene markers}).
+
+	\item {\bf Cloning} of the modified host cells to create a population of
+	them.
+
+\end{enumerate}
+
+Each of these stages are far more complicated than this\marginpar{Except from
+cloning, that's easy...}, and contain many substages and niggly bits, each will
+be covered in greater detail here:
+
+\subsection*{Isolation}
+
+The aim of isolation is to extract the segment of DNA from a cell that codes for
+the emergant (and desired) phenotypical characteristics.
+
+\begin{enumerate}
+	
+	\item First, a cell that produces the protein we want to extract is isolated
+	and some of it's messenger RNA (mRNA) is extracted.
+
+	\item An enzyme called {\bf reverse transcriptase} is then used to make DNA
+	from the isolated mRNA. This DNA is complementary to the mRNA, and so is
+	referred to as complementary DNA (cDNA).
+
+	\item The enzyme DNA polymerase is then used to build up the complementary
+	nucleotides onto the cDNA strand to create a double strand of DNA that is
+	the isolated gene.
+
+\end{enumerate}
+
+\subsection*{Insertion}
+
+In order to make use of the gene we just extracted, we need to get it into the
+cell that we want to genetically modify. This concerns both the {\it insertion}
+and {\it transformation} stage. The insertion stage is principally concerned
+with splicing the isolated gene into another piece of 'carrier' DNA. This
+carrier DNA is called a {\it vector}.
+
+\begin{enumerate}
+	
+	\item A restriction endonuclease enzyme is used to cut the obtained gene at
+	points where there is a specific base sequence (such as AAGCTT). This
+	creates a 'sticky end' where one strand of DNA carries on but the other is
+	cut sooner.
+
+	\item A plasmid of bacteria DNA is also cut using the same enzyme. This
+	makes a pair of stick ends complementary to those on the gene.
+	\marginpar{Note that the {\it plasmid} is the vector here.}
+
+	\item DNA ligase is then used to splice the gene into the plasmid by joining
+	the complementary ends of the DNA strands. The plasmids now have recombinant
+	DNA.
+
+\end{enumerate}
+
+\textit{N.b. there are two types of restriction endonuclease, ones that cut a
+'blunt' end straight through both DNA strands, and ones that cut 'sticky' or
+'palendromic' ends where a cut is made in each strand, but they are a few bases
+apart.}
+
+\subsection*{Tranformation}
+
+Transformation is when the DNA is transferred into the cells that are to be given the extra DNA. This process has a very low success rate (less than 1\%).
+
+\begin{enumerate}
+	
+	\item The plasmids of DNA are inserted into the bacterium by immersing both
+	in a solution of calcium ions and fluctuating the temperature.
+
+	\item This makes the cell wall of the bacterium permiable which then allows
+	plasmids to diffuse in.
+
+\end{enumerate}
+
+However, some plasmids (in the insertion stage) will have closed up without
+incorperating the gene we want them to (since the ends of the plasmid we cut are
+also complementary to eachother), and few bacteria will take up plasmids at all.
+
+\subsection*{Identification}
+
+Since very few cells {\it actually} take up the new gene, it is necessary to use
+some sort of method to distinguish between cells where the gene transfer has
+been successful (so they can be cloned) and those where the transfer wasn't
+successful.
+
+\begin{enumerate}
+	
+	\item Another gene is spliced into the plasmid (in the insertion stage) that
+	will act as a marker to show the plasmid has been accepted.
+
+	\item This can be a gene for anything from antibiotic resistance to a
+	florescent protein.
+
+	\item The cells that don't display the trait associated with the marker gene
+	in their phenotype can then be disgarded.
+
+\end{enumerate}
+
+\section*{In vitro gene cloning}
+
+The method I've just outlined is known as {\it in vivo} gene cloning (i.e. it happens inside a living cell). However, there is another way of cloning genes outside of a cell. This is called {\it in vitro} cloning.
+
+%TODO: Write section on 'in vitro' cloning
+
+\subsection*{Sample use cases of rDNA technology}
+\subsubsection*{Insulin synthesis}
+
+Insulin can be made by E.coli. Scientists isolated the gene for insulin
+production and inserted it into a plasmid normally present in an E.coli
+bacterium. The plasmid was then taken up by the E.coli cell. This meant that the
+bacterium now started to secrete human insulin, which could be harvested. The
+bacteria is then cultured in large fermenters that allow scientists to extract
+large quantities of human insulin.
+
+\subsubsection*{AAT synthesis}
+
+AAT (alpha 1 antitrypsin protein) is a protein produced by humans that helps
+protect body tissue from the harmful effects of other proteins. Some people have
+a genetic defect that means that not enough AAT is produced, which leads to
+emphysema due to enzymes destroying alveoli walls and reducing their elastcity.
+Scientists added DNA that produces AAT to the embryo of a female sheep, which
+they then cloned many times. The protein is then extracted from the milk of
+these transformed sheep to use as a treatment for AAT deficiency induced
+emphysema. {\it N.b. this won't treat smoking induced emphysema since the same
+disease is brought about via a different cause.}
+
+\subsubsection*{Cystic fibrosis treatment}
+Cystic fibrosis is caused by a mutation in the human CTFR gene. The CTFR gene
+codes for a protein that transports chloride across epithelial cell membranes.
+When the CTFR gene is mutated, the tertiary structure of the CTFR protein
+changes, so no chloride ions can be actively transported out of epithelial
+cells. If chloride ions {\it were} transported (like they are in normal cells),
+then the water potential of the lumen would decrease so that water would pass
+out of the cell by osmosis. In people with cystic fibrosis this doesn't happen
+since the CTFR protein doesn't work and the fluid in the lumen becomes very
+viscous. 
+
+It is possible to extract healthy CTFR genes from 'normal' people, but in order
+to treat a patient with cystic fibrosis, these genes must be inserted into each
+of the billions of cells that have CTFR proteins in the patients body. It is
+possible to do that in a number of ways:
+\begin{longtable}{p{\textwidth-20\tabcolsep-1in} p{\textwidth-20\tabcolsep-1in}}
+Method & Issues\\ \midrule
+\endfirsthead
+Method & Issues\\ \midrule
+\endhead
+\midrule
+\multicolumn{2}{r}{continued \ldots}
+\endfoot
+\endlastfoot
+	Wrap healthy CTFR genes in lipids that are absorbed into the patient's
+	cells through the cell wall. & Most genes that are absorbed aren't expressed
+	by the cell, so few cells are made to function properly.\\ \midrule
+	Insert healthy CTFR genes into harmless viruses that then infect the
+	patient's epithelial cells and release their payload of CTFR gene into the
+	cell. & The viruses released don't harm the cell or replicate (in theory,
+	though there have been cases in trials where the viruses did act as
+	pathogens), but there is only a slim chance that the deposited genes will
+	get into the nucleus and start being used to create proteins.\\ \midrule
+\end{longtable}
+
+\subsubsection*{Gene therapy for SCID}
+
+SCID (Severe Combined ImmunoDeficiency disease) is a rare inherited condition
+that renders the immune system of children useless, which means that they are
+susceptible to infections that while normally trivial for healthy children, can
+develop into life threatening ilnesses.
+
+Currently, the only technique used to combat SCID is to have the child wear an
+'isolation bubble', to prevent exposure to pathogens.
+
+The disease is brought about by the child having inherited a set of faulty
+alleles, meaning that the enzyme {\it adenosine deaminase (ADA)} isn't produced.
+In the absence of this enzyme, T lympocytes (which normally detect pathogens
+that have entered the body) cannot function and are destroyed.
+
+Gene therapy is being used to treat SCID. The aim of the treatment is to replace
+the T lymphocytes in the child's body with ones that have the normal ADA gene.
+This is acheived using the following method:
+
+\begin{enumerate}
+
+	\item A restriction endonuclease is used to isolate the normal ADA gene from
+	the DNA of a healthy cell (by cutting the DNA when it meets a specific
+	sequence of bases).
+
+	\item The normal ADA gene is inserted into a virus, which is then allowed to
+	replicate in a cell culture to produce large numbers of the virus.
+
+	\item T lymphocytes are extracted from the patient's bone marrow and are
+	cloned to increase their number.
+
+	\item The viruses with the ADA gene are mixed with the (cloned) T
+	lymphocytes of the patient. The viruses inject their payload of DNA into
+	the nuclei of the T lymphocytes.
+
+	\item The white blood cells with the 'normal' ADA gene are transfused back
+	into the patient where they will undergo mitosis and provide a supply of
+	white blood cells {\it with} the healthy ADA gene.
+
+\end{enumerate}
+
+%TODO:Add questions
+
+\end{document}

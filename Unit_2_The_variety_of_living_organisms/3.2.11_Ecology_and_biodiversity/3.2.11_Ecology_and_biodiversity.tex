@@ -1,0 +1,111 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage[parfill]{parskip}
+\usepackage{tikz}
+\usepackage{amssymb,amsmath}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\makeatletter
+\renewcommand\@seccntformat[1]{}
+\makeatother
+
+\pagestyle{fancyplain}
+
+\author{Todd Davies}
+\title{3.2.11 Ecology and biodiversity}
+\date{\today}
+
+\begin{document}
+
+\rhead{3.2.11 Ecology and biodiversity}
+\lhead{\today}
+
+\maketitle
+
+\section{Species diversity}
+\thispagestyle{empty}
+
+Species diversity is the number of species present and the abundance of those
+species in a community.
+
+A higher species diversity of one type of organism can increase the species
+diversity of another type. For example, in areas with a high species diversity
+of plants and trees (such as a rainforest) will also have a high species
+diversity of insects, animals and birds since there will be more habitats and a
+larger selection of foods.
+
+It is often important to measure the diversity of an ecosystem over time to
+identigy areas that are undergoing major change.
+
+\subsection{Measuring species diversity}
+
+There are a number of ways to measure species diversity, the simplest being to
+count up the number of different species.
+
+However, other measures are better since they are able to take into account the
+population sizes of species too. One such method is called the index of
+diversity. It gives a number that is higher for more diverse areas. The formula is as follows:
+
+\[
+	d = \frac{N(N-1)}{\sum n(n-1)}
+\]
+
+Where:
+
+\begin{center}
+\begin{tabular}{|l|l|}
+	\hline
+	N & The total number of organisms of all species\\ \hline
+	n & The total number of one species\\ \hline
+	$\sum$ & Sum of\\ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Example - species diversity}
+
+There are three different species of flower in a field, one is red, one is white
+and the other is blue.
+
+There are eleven flowers altogether, three of them are red and and five are white.
+
+{\bf Calculate the species diversity index of the field.}
+
+\begin{enumerate}
+
+	\item First we need to find the number of blue flowers.\\
+		  11 - 3 - 5 = 3
+	\item Now we must use the formula ($d = \frac{N(N-1)}{\sum n(n-1)}$)\\
+		  \[
+		  	\begin{split}
+		  	d &= \frac{11(11-1)}{3(3-1) + 5(5-1) + 3(3-1)}\\
+		  	  &= \frac{11\times10}{(3\times2) + (5\times4) + (3\times2)}\\
+		  	  &= \frac{110}{6 + 20 + 6}\\
+		  	  &= \frac{110}{32}\\
+		  	  &= 3.44
+		  	\end{split}
+		  \]
+
+\end{enumerate}
+
+\subsection{Species diversity is affected by human activities}
+
+Human activities such as agriculture and deforestation can affect species
+diversity.
+
+Deforistation reduces the number of trees (and sometimes the number of tree
+species) in an environment. This has the side effect of destroying habitats and
+food sources for many birds and insects, and forces them to migrate into
+increasingly smaller areas of forest (which could temporarily increase species
+diversity in those areas).
+
+Agriculture works best when large areas of land are all the same, growing only
+one crop. Woodland is cleared in order to make room for the crops, and hedgerows
+are removed to increase the size of many small fields into fewer large fields.
+Both of these acts decrease species diversity.
+
+Pesticides and herbicides are used to kill undesirable species, which not only
+reduces the population sizes of those species, but also decreases the population
+size of any organisms that may rely on them.
+
+\end{document}

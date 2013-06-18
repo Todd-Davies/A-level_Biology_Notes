@@ -7,6 +7,7 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{calc}
+\usepackage{tikz}
 \pagestyle{fancyplain}
 
 \title{3.5.8 - Gene cloning \& transfer}
@@ -388,8 +389,6 @@ This is acheived using the following method:
 
 \end{itemize}
 
-%TODO:Add section on locating and sequencing genes
-
 \section*{Locating and sequencing genes}
 
 It is important for us to accurately determine what sequence of nucleotides make
@@ -408,10 +407,6 @@ DNA and the seperate strands are then mixed and combine in a process called {\bf
 DNA hybridisation}. A new piece of DNA is formed with the desired combination of
 DNA marked.
 
-\subsection*{DNA sequencing}
-
-%TODO:Write subsection on DNA sequencing
-
 \subsection*{Gel electrophoresis}
 
 Gel electrophoresis allows us to seperate out fragments of DNA of different
@@ -420,7 +415,56 @@ voltage across it, so that the charged DNA fragments are pulled across the gel.
 DNA of longer lengths moves less than DNA of shorter lengths which produces
 bands of DNA along the agar so the length of differing strands can be compared.
 
-%TODO:Mini section on gene screening
+
+\subsection*{DNA sequencing}
+
+DNA sequencing is finding the exact order of bases on a section of DNA, the best
+way of doing so is called the Sanger method.
+
+The Sanger method involves modifying nucleotides to that they cannot attach to
+the next nucleotide in the sequence when they are being joined together. They
+act as terminators, stopping synthesis of the DNA strand. Four different
+terminator bases are used (for adanine, thymine, guanine and cytosine).
+
+Four test tubes are set up, each containing the following:
+
+\begin{itemize}
+
+	\item Lots of single stranded fragments of the DNA to be sequenced.
+
+	\item A lot of nucleotides from all the four bases.
+
+	\item A small quantity of terminator nucleotides, one base in each test
+	tube.
+
+	\item A primer to start the DNA synthesis.
+
+	\item DNA polymerase to synthesise the complementary strand of DNA.
+
+\end{itemize}
+
+Since the binding of nucleotides to the template strand is a random process,
+there is an equal chance of a normal nucleotide or terminator nucleotide joining
+the strand. This means that DNA synthesis could be terminated after just one
+base or after several kilobases.
+
+As a result of this, the fragments of DNA left in each test tube after synthesis
+will be of varying lengths, but each will end with a terminator nucleotide of
+the base corresponding to that tube.
+
+Gel electrophoresis is then performed on the DNA in the test tubes. A pattern
+such as this will emerge:
+
+\begin{center}
+	\includegraphics[scale=0.3]{sanger_method}
+\end{center}
+
+Since the fragments started at the top of the diagram, the lighter ones will be
+at the bottom. This means that the sequence will be:
+
+\begin{center}
+	TCAGTAATGCCA
+\end{center}
 
 \section*{Genetic screening}
 
@@ -434,8 +478,83 @@ genes (genes that detect and prevent cancer). If a person has a mutation in
 their tumor supressor genes, then they should take extra care to avoid mutagens
 that would increase their risk factor of getting cancer.
 
-%TODO:Section on genetic fingerprinting
+\section*{Genetic fingerprinting}
 
-%TODO:Add questions
+A genetic fingerprint is a map of the introns in a gene that are unique to a
+specific organism. All organsisms have repeating sections of bases in their
+introns called core sequences, the length of which has a repeating pattern.
+
+There are five stages to genetic fingerprinting:
+
+\begin{itemize}
+
+	\item {\bf Extraction} - The DNA must be extracted from the sample (which
+	could be hair, blood etc) and if it is a small sample, it's quantity
+	increased using the polymerase chain reaction.
+
+	\item {\bf Digestion} - The DNA is cut into fragments with restriction
+	endonucleases.
+
+	\item {\bf Seperation} - The fragments of DNA are seperated by size
+	according to gel electrophoresis. An alkali is then used to seperate the two
+	strands of DNA and the single strands are then transfered onto a nylon
+	membrane using {\it southern blotting}. Southern blotting is carried out as
+	follows:
+
+	\begin{itemize}
+
+		\item A thin nylon membrane is laid over the gel.
+
+		\item The membrane is covered with sheets of absorbant paper which draws
+		up the liquid using capillary action.
+
+		\item This transfers the DNA fragments onto the nylon membrane in the
+		same position they were on the gel.
+
+		\item The DNA fragments are fixed to the membrane using UV light.		
+
+	\end{itemize}
+
+	\item {\bf Hybridisation} - Marker probes (can be radioactive or
+	flourescent) are attached to the core sequences using complementary base
+	pairing.
+
+
+	\item {\bf Development} - An image of the position of the base sequences is
+	taken (by a UV camera or radiation detector such as X-ray film), and a
+	series of bars is revealed. The pattern of bands is unique to only one
+	organism, except from identical twins, who share the same DNA.
+
+\end{itemize}
+
+Two fingerprints can be visually compared for similarities, and computers can
+work out the percentage difference between two different fingerprints to give an
+idea of the genetic relations between two fingerprints.
+
+\subsection*{Uses of genetic fingerprinting}
+
+\begin{itemize}
+
+	\item DNA fingerprinting is used extensively in forensic science. It can be
+	used to indicate if an individual has been involved in a crime, or to
+	determine the parents of a child through blood or semen samples.
+
+	\item It can also be used to determine the genetic diversity of a
+	population. The larger the difference between samples, the more the samples
+	vary genetically.
+
+	\item Genetic fingerprinting can be used to identify specific genes in an
+	organism, and so can be used to see if a patient has genetic disease such as
+	huntingtons. 
+
+	\item The precise species of microbes in an infection can be determined
+	using genetic fingerprinting so that doctors can prescribe the most
+	appropriate treatment.
+
+	\item The genetic relationships between captive animals can be determined to
+	avoid undesirable breeding occuring. This can help avoid mating between
+	siblings, the offspring of which could have genetic issues.
+
+\end{itemize}
 
 \end{document}
